@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		62AF5F1921E393AE00DE4FE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AF5F1821E393AE00DE4FE7 /* AppDelegate.swift */; };
-		62AF5F1B21E393AE00DE4FE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AF5F1A21E393AE00DE4FE7 /* ViewController.swift */; };
+		62AF5F1B21E393AE00DE4FE7 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62AF5F1A21E393AE00DE4FE7 /* MenuViewController.swift */; };
 		62AF5F1E21E393AE00DE4FE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62AF5F1C21E393AE00DE4FE7 /* Main.storyboard */; };
 		62AF5F2121E393AE00DE4FE7 /* English_with_Papich.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 62AF5F1F21E393AE00DE4FE7 /* English_with_Papich.xcdatamodeld */; };
 		62AF5F2321E393AF00DE4FE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62AF5F2221E393AF00DE4FE7 /* Assets.xcassets */; };
@@ -18,7 +18,7 @@
 /* Begin PBXFileReference section */
 		62AF5F1521E393AE00DE4FE7 /* English with Papich.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "English with Papich.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		62AF5F1821E393AE00DE4FE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		62AF5F1A21E393AE00DE4FE7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		62AF5F1A21E393AE00DE4FE7 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		62AF5F1D21E393AE00DE4FE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		62AF5F2021E393AE00DE4FE7 /* English_with_Papich.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = English_with_Papich.xcdatamodel; sourceTree = "<group>"; };
 		62AF5F2221E393AF00DE4FE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				62AF5F1821E393AE00DE4FE7 /* AppDelegate.swift */,
-				62AF5F1A21E393AE00DE4FE7 /* ViewController.swift */,
+				62D245FF21E395090086776E /* Controllers */,
 				62AF5F1C21E393AE00DE4FE7 /* Main.storyboard */,
 				62AF5F2221E393AF00DE4FE7 /* Assets.xcassets */,
 				62AF5F2421E393AF00DE4FE7 /* LaunchScreen.storyboard */,
@@ -65,6 +65,14 @@
 				62AF5F1F21E393AE00DE4FE7 /* English_with_Papich.xcdatamodeld */,
 			);
 			path = "English with Papich";
+			sourceTree = "<group>";
+		};
+		62D245FF21E395090086776E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				62AF5F1A21E393AE00DE4FE7 /* MenuViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62AF5F1B21E393AE00DE4FE7 /* ViewController.swift in Sources */,
+				62AF5F1B21E393AE00DE4FE7 /* MenuViewController.swift in Sources */,
 				62AF5F1921E393AE00DE4FE7 /* AppDelegate.swift in Sources */,
 				62AF5F2121E393AE00DE4FE7 /* English_with_Papich.xcdatamodeld in Sources */,
 			);
@@ -287,6 +295,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C8SHT3568Q;
 				INFOPLIST_FILE = "English with Papich/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +314,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C8SHT3568Q;
 				INFOPLIST_FILE = "English with Papich/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
