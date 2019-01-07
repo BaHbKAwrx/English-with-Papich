@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import CoreData
 
 class MenuViewController: UIViewController {
+    
+    //CoreData vars
+    lazy var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var levels = [MenuLevel]()
     
     @IBOutlet weak var menuTableView: UITableView!
     
@@ -19,8 +24,55 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        getStartData()
+        
+        //Loading data from CoreData
+        let fetchRequest: NSFetchRequest<MenuLevel> = MenuLevel.fetchRequest()
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "levelNumber", ascending: true)]
+        print(fetchRequest)
+        
+        do {
+            let results = try context.fetch(fetchRequest)
+            levels = results
+            print(levels)
+        } catch {
+            print(error.localizedDescription)
+        }
+        
         menuTableView.delegate = self
         menuTableView.dataSource = self
+        
+    }
+    
+    //function for init start values for level progress
+    func getStartData() {
+        
+        let fetchRequest: NSFetchRequest<MenuLevel> = MenuLevel.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "levelNumber != nil")
+        
+        var records = 0
+        
+//        print(context)
+//        print(fetchRequest)
+        
+        do {
+            let count = try context.count(for: fetchRequest)
+            records = count
+            print("Data is there already?")
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+        guard records == 0 else { return }
+        
+        for i in 0..<4 {
+            let entity = NSEntityDescription.entity(forEntityName: "MenuLevel", in: context)
+            let level = NSManagedObject(entity: entity!, insertInto: context) as! MenuLevel
+            
+            level.levelNumber = Int16(i + 1)
+            level.correctAnswers = 0
+            level.incorrectAnswers = 0
+        }
         
     }
     
@@ -31,6 +83,28 @@ class MenuViewController: UIViewController {
     
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
+        
+        let ac = UIAlertController(title: nil, message: "It will reset all your progress!", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default) {[weak self] (action) in
+            for level in (self?.levels)! {
+                level.correctAnswers = 0
+                level.incorrectAnswers = 0
+            }
+            
+            do {
+                try self?.context.save()
+                self?.menuTableView.reloadData()
+            } catch {
+                print(error.localizedDescription)
+            }
+            
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        ac.addAction(okAction)
+        ac.addAction(cancelAction)
+        present(ac, animated: true, completion: nil)
+        
     }
     
 
@@ -49,10 +123,10 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell", for: indexPath) as? MenuTableViewCell
         
         cell?.bgImage.image = UIImage(named: "menuCellRect")
-        cell?.levelLabel.text = levelsArray[indexPath.row]
+        cell?.levelLabel.text = "\(levels[indexPath.row].levelNumber) Level"
         cell?.descriptionLabel.text = descriptionArray[indexPath.row]
-        cell?.correctLabel.text = "27 correct"
-        cell?.incorrectLabel.text = "12 incorrect"
+        cell?.correctLabel.text = "\(levels[indexPath.row].correctAnswers) correct"
+        cell?.incorrectLabel.text = "\(levels[indexPath.row].incorrectAnswers) incorrect"
         
         return cell ?? UITableViewCell()
         
