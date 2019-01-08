@@ -12,6 +12,30 @@ import CoreData
 
 class Level1ViewController: UIViewController {
     
+    //Progress ShapeLayer
+    var shapeLayer: CAShapeLayer! {
+        didSet {
+            shapeLayer.lineWidth = 25
+            shapeLayer.lineCap = "round"
+            shapeLayer.fillColor = nil
+            shapeLayer.strokeEnd = 1
+            let color = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 1).cgColor
+            shapeLayer.strokeColor = color
+        }
+    }
+    
+    var overShapeLayer: CAShapeLayer! {
+        didSet {
+            overShapeLayer.lineWidth = 17
+            overShapeLayer.lineCap = "round"
+            overShapeLayer.fillColor = nil
+            overShapeLayer.strokeEnd = 0
+            let color = #colorLiteral(red: 0.7882352941, green: 0.3215686275, blue: 0.3215686275, alpha: 1).cgColor
+            overShapeLayer.strokeColor = color
+        }
+    }
+    
+    @IBOutlet weak var progressImageView: UIImageView!
     @IBOutlet weak var correctLabel: UIImageView!
     @IBOutlet weak var incorrectLabel: UIImageView!
     @IBOutlet weak var firstButton: UIButton!
@@ -29,7 +53,7 @@ class Level1ViewController: UIViewController {
     var questionNumbersArr = [Int]()
     var questionsArray = [FirstLevelQuestion]()
     
-    
+    // MARK: - VC Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -58,10 +82,33 @@ class Level1ViewController: UIViewController {
         } catch {
             print(error.localizedDescription)
         }
+        
+        // Custom progress bar
+        shapeLayer = CAShapeLayer()
+        view.layer.addSublayer(shapeLayer)
+        
+        overShapeLayer = CAShapeLayer()
+        view.layer.addSublayer(overShapeLayer)
 
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        configShapeLayer(shapeLayer)
+        configShapeLayer(overShapeLayer)
+    }
+    
     // MARK: - Methods
+    
+    func configShapeLayer(_ shapeLayer: CAShapeLayer) {
+        shapeLayer.frame = view.bounds
+        let path = UIBezierPath()
+        path.move(to: CGPoint(x: self.progressImageView.frame.origin.x, y: self.progressImageView.frame.origin.y + self.progressImageView.frame.height / 2))
+        path.addLine(to: CGPoint(x: self.progressImageView.frame.origin.x + self.progressImageView.frame.width, y: self.progressImageView.frame.origin.y + self.progressImageView.frame.height / 2))
+        shapeLayer.path = path.cgPath
+    }
+    
     func makeNumbersArray() -> [Int] {
         // Делает массив из 10 рандомных неповторяющихся чисел
         var numbersArray = [Int]()
@@ -85,6 +132,20 @@ class Level1ViewController: UIViewController {
             secondButton.setTitle(questionsArray[questionNumbersArr[questionNumber]].allAnswers[1], for: .normal)
             thirdButton.setTitle(questionsArray[questionNumbersArr[questionNumber]].allAnswers[2], for: .normal)
             forthButton.setTitle(questionsArray[questionNumbersArr[questionNumber]].allAnswers[3], for: .normal)
+            
+            // Progress bar add
+            
+            let animation = CABasicAnimation(keyPath: "strokeEnd")
+            animation.toValue = CGFloat(questionNumber)/10
+            animation.duration = 0.5
+            
+            animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+            animation.fillMode = kCAFillModeBoth
+            animation.isRemovedOnCompletion = false
+            
+            overShapeLayer.add(animation, forKey: nil)
+            
+            
         } else {
             performSegue(withIdentifier: "toMenuSegue", sender: self)
         }
@@ -117,6 +178,7 @@ class Level1ViewController: UIViewController {
     }
     
     @IBAction func answerButtonTapped(_ sender: UIButton) {
+        
         if sender.titleLabel?.text == questionsArray[questionNumbersArr[questionNumber]].correctAnswer {
             print("Correct")
             score += 1
@@ -160,6 +222,7 @@ class Level1ViewController: UIViewController {
                 })
             }
         }
+        
     }
     
 }

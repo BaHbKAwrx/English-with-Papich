@@ -137,7 +137,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuBackground" translatesAutoresizingMaskIntoConstraints="NO" id="ymO-q1-aqx">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LevelProgress" translatesAutoresizingMaskIntoConstraints="NO" id="8V2-tb-pfj">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LevelProgress" translatesAutoresizingMaskIntoConstraints="NO" id="8V2-tb-pfj">
                                 <rect key="frame" x="42" y="606" width="290" height="41"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lRg-w0-gLe">
@@ -282,6 +282,7 @@
                         <outlet property="firstButton" destination="apo-pc-420" id="SOW-cI-Phj"/>
                         <outlet property="forthButton" destination="4iB-aV-tFN" id="qFS-qB-HT8"/>
                         <outlet property="incorrectLabel" destination="tF1-mv-Xb0" id="xNy-X3-3WC"/>
+                        <outlet property="progressImageView" destination="8V2-tb-pfj" id="wbc-ld-Cn4"/>
                         <outlet property="secondButton" destination="4w6-gL-cgZ" id="wcy-UU-Uy0"/>
                         <outlet property="thirdButton" destination="dRL-d6-1rg" id="5a3-2m-1pO"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="toMenuSegue" id="phQ-yt-sWd"/>
