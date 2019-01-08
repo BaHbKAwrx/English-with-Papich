@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -140,73 +141,6 @@
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LevelProgress" translatesAutoresizingMaskIntoConstraints="NO" id="8V2-tb-pfj">
                                 <rect key="frame" x="42" y="606" width="290" height="41"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lRg-w0-gLe">
-                                <rect key="frame" x="42" y="423" width="290" height="156"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Cg9-ZO-BJX">
-                                        <rect key="frame" x="0.0" y="0.0" width="290" height="74"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="answerRectangle" translatesAutoresizingMaskIntoConstraints="NO" id="90a-iH-TlP">
-                                                <rect key="frame" x="0.0" y="0.0" width="141" height="74"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="answerRectangle" translatesAutoresizingMaskIntoConstraints="NO" id="inV-ug-q34">
-                                                <rect key="frame" x="149" y="0.0" width="141" height="74"/>
-                                            </imageView>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3Nw-gE-9c6">
-                                        <rect key="frame" x="0.0" y="82" width="290" height="74"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="answerRectangle" translatesAutoresizingMaskIntoConstraints="NO" id="ODe-DQ-uKO">
-                                                <rect key="frame" x="0.0" y="0.0" width="141" height="74"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="answerRectangle" translatesAutoresizingMaskIntoConstraints="NO" id="ly5-xz-niO">
-                                                <rect key="frame" x="149" y="0.0" width="141" height="74"/>
-                                            </imageView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="apo-pc-420">
-                                <rect key="frame" x="41.5" y="423" width="141" height="74"/>
-                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="16"/>
-                                <state key="normal" title="Мусор">
-                                    <color key="titleColor" red="0.69411764705882351" green="0.22352941176470587" blue="0.22352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="answerButtonTapped:" destination="gxB-Cg-9XJ" eventType="touchUpInside" id="hbB-yn-aSl"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRL-d6-1rg">
-                                <rect key="frame" x="41.5" y="505" width="141" height="74"/>
-                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="16"/>
-                                <state key="normal" title="Союзник">
-                                    <color key="titleColor" red="0.69411764710000001" green="0.22352941179999999" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="answerButtonTapped:" destination="gxB-Cg-9XJ" eventType="touchUpInside" id="Veg-Zy-Fb9"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4iB-aV-tFN">
-                                <rect key="frame" x="190.5" y="505" width="141" height="74"/>
-                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="16"/>
-                                <state key="normal" title="Авария">
-                                    <color key="titleColor" red="0.69411764710000001" green="0.22352941179999999" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="answerButtonTapped:" destination="gxB-Cg-9XJ" eventType="touchUpInside" id="lW1-IE-sQa"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4w6-gL-cgZ">
-                                <rect key="frame" x="190.5" y="423" width="141" height="74"/>
-                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="16"/>
-                                <state key="normal" title="Вещи">
-                                    <color key="titleColor" red="0.69411764710000001" green="0.22352941179999999" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="answerButtonTapped:" destination="gxB-Cg-9XJ" eventType="touchUpInside" id="7wp-l2-ZMY"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZH-2N-dYU">
                                 <rect key="frame" x="16" y="32" width="56" height="63"/>
                                 <state key="normal" image="Back button"/>
@@ -214,30 +148,94 @@
                                     <action selector="backButtonTapped:" destination="gxB-Cg-9XJ" eventType="touchUpInside" id="BbW-bP-xfP"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2cU-Tj-ciQ">
-                                <rect key="frame" x="47" y="144" width="280" height="229"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="zB0-e4-r58">
+                                <rect key="frame" x="42" y="133.5" width="290" height="400"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="a2N-Cs-GsM">
-                                        <rect key="frame" x="69" y="0.0" width="142" height="142"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2cU-Tj-ciQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="229"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3l-x3-4CU">
-                                                <rect key="frame" x="0.0" y="0.0" width="142" height="142"/>
-                                                <state key="normal" image="Sound button"/>
-                                                <connections>
-                                                    <action selector="soundButtonTapped:" destination="gxB-Cg-9XJ" eventType="touchUpInside" id="3af-IY-KWZ"/>
-                                                </connections>
-                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="a2N-Cs-GsM">
+                                                <rect key="frame" x="74" y="0.0" width="142" height="142"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3l-x3-4CU">
+                                                        <rect key="frame" x="0.0" y="0.0" width="142" height="142"/>
+                                                        <state key="normal" image="Sound button"/>
+                                                        <connections>
+                                                            <action selector="soundButtonTapped:" destination="gxB-Cg-9XJ" eventType="touchUpInside" id="3af-IY-KWZ"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="wJh-hX-oAZ">
+                                                <rect key="frame" x="5" y="162" width="280" height="67"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Correct!" translatesAutoresizingMaskIntoConstraints="NO" id="kxB-KB-KGk">
+                                                        <rect key="frame" x="0.0" y="0.0" width="106" height="67"/>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Incorrect!" translatesAutoresizingMaskIntoConstraints="NO" id="tF1-mv-Xb0">
+                                                        <rect key="frame" x="156" y="0.0" width="124" height="67"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="wJh-hX-oAZ">
-                                        <rect key="frame" x="0.0" y="162" width="280" height="67"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nVQ-Q4-Tdb">
+                                        <rect key="frame" x="0.0" y="244" width="290" height="156"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Correct!" translatesAutoresizingMaskIntoConstraints="NO" id="kxB-KB-KGk">
-                                                <rect key="frame" x="0.0" y="0.0" width="106" height="67"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Incorrect!" translatesAutoresizingMaskIntoConstraints="NO" id="tF1-mv-Xb0">
-                                                <rect key="frame" x="156" y="0.0" width="124" height="67"/>
-                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xiH-7T-id0">
+                                                <rect key="frame" x="0.0" y="0.0" width="290" height="74"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="apo-pc-420">
+                                                        <rect key="frame" x="0.0" y="0.0" width="141" height="74"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="16"/>
+                                                        <inset key="contentEdgeInsets" minX="13" minY="0.0" maxX="13" maxY="0.0"/>
+                                                        <state key="normal" title="Мусор" backgroundImage="answerRectangle">
+                                                            <color key="titleColor" red="0.69411764705882351" green="0.22352941176470587" blue="0.22352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="answerButtonTapped:" destination="gxB-Cg-9XJ" eventType="touchUpInside" id="hbB-yn-aSl"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4w6-gL-cgZ">
+                                                        <rect key="frame" x="149" y="0.0" width="141" height="74"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="16"/>
+                                                        <inset key="contentEdgeInsets" minX="13" minY="0.0" maxX="13" maxY="0.0"/>
+                                                        <state key="normal" title="Вещи" backgroundImage="answerRectangle">
+                                                            <color key="titleColor" red="0.69411764710000001" green="0.22352941179999999" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="answerButtonTapped:" destination="gxB-Cg-9XJ" eventType="touchUpInside" id="7wp-l2-ZMY"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qmT-qr-4qf">
+                                                <rect key="frame" x="0.0" y="82" width="290" height="74"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRL-d6-1rg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="141" height="74"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="16"/>
+                                                        <inset key="contentEdgeInsets" minX="13" minY="0.0" maxX="13" maxY="0.0"/>
+                                                        <state key="normal" title="Союзник" backgroundImage="answerRectangle">
+                                                            <color key="titleColor" red="0.69411764710000001" green="0.22352941179999999" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="answerButtonTapped:" destination="gxB-Cg-9XJ" eventType="touchUpInside" id="Veg-Zy-Fb9"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4iB-aV-tFN">
+                                                        <rect key="frame" x="149" y="0.0" width="141" height="74"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="16"/>
+                                                        <inset key="contentEdgeInsets" minX="13" minY="0.0" maxX="13" maxY="0.0"/>
+                                                        <state key="normal" title="Авария" backgroundImage="answerRectangle">
+                                                            <color key="titleColor" red="0.69411764710000001" green="0.22352941179999999" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="answerButtonTapped:" destination="gxB-Cg-9XJ" eventType="touchUpInside" id="lW1-IE-sQa"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -245,35 +243,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="dRL-d6-1rg" firstAttribute="centerX" secondItem="ODe-DQ-uKO" secondAttribute="centerX" id="0XR-38-hKO"/>
-                            <constraint firstItem="Qwv-cM-zdd" firstAttribute="bottom" secondItem="8V2-tb-pfj" secondAttribute="bottom" constant="20" id="1J9-QE-HDC"/>
-                            <constraint firstItem="apo-pc-420" firstAttribute="centerX" secondItem="90a-iH-TlP" secondAttribute="centerX" id="33b-ti-WEV"/>
-                            <constraint firstItem="lRg-w0-gLe" firstAttribute="top" secondItem="2cU-Tj-ciQ" secondAttribute="bottom" constant="50" id="54A-2I-dNi"/>
-                            <constraint firstItem="wZH-2N-dYU" firstAttribute="top" secondItem="Qwv-cM-zdd" secondAttribute="top" constant="12" id="6Xe-Gz-QCq"/>
-                            <constraint firstItem="4iB-aV-tFN" firstAttribute="width" secondItem="ly5-xz-niO" secondAttribute="width" id="967-yq-Qk9"/>
-                            <constraint firstItem="2cU-Tj-ciQ" firstAttribute="centerX" secondItem="ymO-q1-aqx" secondAttribute="centerX" id="E6c-4n-Osv"/>
-                            <constraint firstItem="8V2-tb-pfj" firstAttribute="leading" secondItem="Qwv-cM-zdd" secondAttribute="leading" constant="42" id="Fvq-AI-16W"/>
-                            <constraint firstItem="4w6-gL-cgZ" firstAttribute="height" secondItem="inV-ug-q34" secondAttribute="height" id="N4D-yi-VSw"/>
-                            <constraint firstItem="4w6-gL-cgZ" firstAttribute="centerY" secondItem="inV-ug-q34" secondAttribute="centerY" id="NwD-63-Ttq"/>
-                            <constraint firstItem="apo-pc-420" firstAttribute="centerY" secondItem="90a-iH-TlP" secondAttribute="centerY" id="OY1-MH-22x"/>
-                            <constraint firstItem="ymO-q1-aqx" firstAttribute="leading" secondItem="Qwv-cM-zdd" secondAttribute="leading" id="POy-Yn-ljq"/>
-                            <constraint firstItem="8V2-tb-pfj" firstAttribute="top" secondItem="lRg-w0-gLe" secondAttribute="bottom" constant="27" id="Rqx-Tm-bjC"/>
-                            <constraint firstItem="4iB-aV-tFN" firstAttribute="height" secondItem="ly5-xz-niO" secondAttribute="height" id="XQv-Ea-lIL"/>
-                            <constraint firstItem="lRg-w0-gLe" firstAttribute="centerX" secondItem="ymO-q1-aqx" secondAttribute="centerX" id="YKE-AU-v53"/>
-                            <constraint firstItem="apo-pc-420" firstAttribute="height" secondItem="90a-iH-TlP" secondAttribute="height" id="cvT-Lm-Y7U"/>
-                            <constraint firstItem="dRL-d6-1rg" firstAttribute="centerY" secondItem="ODe-DQ-uKO" secondAttribute="centerY" id="gtX-v3-gDS"/>
-                            <constraint firstItem="ymO-q1-aqx" firstAttribute="top" secondItem="Zxm-rX-74I" secondAttribute="top" id="iuk-25-g45"/>
-                            <constraint firstAttribute="bottom" secondItem="ymO-q1-aqx" secondAttribute="bottom" id="mlr-Zb-cnS"/>
-                            <constraint firstItem="apo-pc-420" firstAttribute="width" secondItem="90a-iH-TlP" secondAttribute="width" id="sLW-gX-iQ3"/>
-                            <constraint firstItem="dRL-d6-1rg" firstAttribute="height" secondItem="ODe-DQ-uKO" secondAttribute="height" id="uc0-AG-k4v"/>
-                            <constraint firstItem="4w6-gL-cgZ" firstAttribute="width" secondItem="inV-ug-q34" secondAttribute="width" id="v5f-sK-HRA"/>
-                            <constraint firstItem="4w6-gL-cgZ" firstAttribute="centerX" secondItem="inV-ug-q34" secondAttribute="centerX" id="vcB-J0-zaX"/>
-                            <constraint firstItem="4iB-aV-tFN" firstAttribute="centerY" secondItem="ly5-xz-niO" secondAttribute="centerY" id="w5e-CB-VcZ"/>
-                            <constraint firstItem="ymO-q1-aqx" firstAttribute="trailing" secondItem="Qwv-cM-zdd" secondAttribute="trailing" id="xOd-wy-D4L"/>
-                            <constraint firstItem="4iB-aV-tFN" firstAttribute="centerX" secondItem="ly5-xz-niO" secondAttribute="centerX" id="xSD-o2-Hqg"/>
-                            <constraint firstItem="wZH-2N-dYU" firstAttribute="leading" secondItem="Qwv-cM-zdd" secondAttribute="leading" constant="16" id="zH6-gO-WRa"/>
-                            <constraint firstItem="Qwv-cM-zdd" firstAttribute="trailing" secondItem="8V2-tb-pfj" secondAttribute="trailing" constant="43" id="zPk-Ag-oG6"/>
-                            <constraint firstItem="dRL-d6-1rg" firstAttribute="width" secondItem="ODe-DQ-uKO" secondAttribute="width" id="zsN-fv-mOx"/>
+                            <constraint firstItem="8V2-tb-pfj" firstAttribute="width" secondItem="ymO-q1-aqx" secondAttribute="width" multiplier="0.77333" id="1lZ-aH-u32"/>
+                            <constraint firstItem="Qwv-cM-zdd" firstAttribute="bottom" secondItem="8V2-tb-pfj" secondAttribute="bottom" constant="20" id="7Pw-ex-NaR"/>
+                            <constraint firstAttribute="bottom" secondItem="ymO-q1-aqx" secondAttribute="bottom" id="Ccu-wi-RAV"/>
+                            <constraint firstItem="ymO-q1-aqx" firstAttribute="leading" secondItem="Qwv-cM-zdd" secondAttribute="leading" id="Cls-Xp-zdM"/>
+                            <constraint firstItem="zB0-e4-r58" firstAttribute="centerY" secondItem="ymO-q1-aqx" secondAttribute="centerY" id="NQe-qG-G8O"/>
+                            <constraint firstItem="ymO-q1-aqx" firstAttribute="top" secondItem="Zxm-rX-74I" secondAttribute="top" id="Nj5-we-EGS"/>
+                            <constraint firstItem="wZH-2N-dYU" firstAttribute="leading" secondItem="Qwv-cM-zdd" secondAttribute="leading" constant="16" id="aiI-ke-4rv"/>
+                            <constraint firstItem="8V2-tb-pfj" firstAttribute="centerX" secondItem="ymO-q1-aqx" secondAttribute="centerX" id="bXl-fV-7Iw"/>
+                            <constraint firstItem="ymO-q1-aqx" firstAttribute="trailing" secondItem="Qwv-cM-zdd" secondAttribute="trailing" id="lQA-b6-ADE"/>
+                            <constraint firstItem="wZH-2N-dYU" firstAttribute="top" secondItem="Qwv-cM-zdd" secondAttribute="top" constant="12" id="tog-mC-jox"/>
+                            <constraint firstItem="zB0-e4-r58" firstAttribute="centerX" secondItem="ymO-q1-aqx" secondAttribute="centerX" id="vjv-go-uqh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Qwv-cM-zdd"/>
                     </view>
