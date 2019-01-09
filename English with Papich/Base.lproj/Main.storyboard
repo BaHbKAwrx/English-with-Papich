@@ -125,7 +125,89 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="31.934032983508249"/>
+            <point key="canvasLocation" x="33" y="-1"/>
+        </scene>
+        <!--Aftergame View Controller-->
+        <scene sceneID="rHw-sx-tnU">
+            <objects>
+                <viewController id="mWk-cb-tRW" customClass="AftergameViewController" customModule="English_with_Papich" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="du4-SO-X4G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="afterGameBg" translatesAutoresizingMaskIntoConstraints="NO" id="pwb-4H-m1k">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vt8-Lj-Seg">
+                                <rect key="frame" x="178" y="598" width="178" height="57"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
+                                <state key="normal" title="В меню" backgroundImage="aftergameRectangle">
+                                    <color key="titleColor" red="0.69411764705882351" green="0.22352941176470587" blue="0.22352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="A43-Mr-bKh"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="VkX-qc-0I9">
+                                <rect key="frame" x="38" y="239" width="299.5" height="308.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="j84-eC-aK3">
+                                        <rect key="frame" x="0.0" y="0.0" width="299.5" height="170.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xbN-VU-jy7">
+                                                <rect key="frame" x="0.0" y="0.0" width="299.5" height="71"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы правильно ответили на" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7v-CM-GbB">
+                                                        <rect key="frame" x="0.0" y="0.0" width="299.5" height="30.5"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="22"/>
+                                                        <color key="textColor" red="0.9999127984046936" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7 вопросов из 10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahW-Cv-f0s">
+                                                        <rect key="frame" x="57" y="40.5" width="185.5" height="30.5"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="22"/>
+                                                        <color key="textColor" red="0.9999127984046936" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good job!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o12-On-lTF">
+                                                <rect key="frame" x="62" y="121" width="175.5" height="49.5"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="36"/>
+                                                <color key="textColor" red="0.9999127984046936" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="roflan" translatesAutoresizingMaskIntoConstraints="NO" id="Eso-13-jhx">
+                                        <rect key="frame" x="101.5" y="195.5" width="97" height="113"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Vt8-Lj-Seg" firstAttribute="top" secondItem="VkX-qc-0I9" secondAttribute="bottom" constant="50" id="7tG-oU-066"/>
+                            <constraint firstItem="pwb-4H-m1k" firstAttribute="trailing" secondItem="LA3-DU-zlX" secondAttribute="trailing" id="ACf-Hj-okM"/>
+                            <constraint firstAttribute="bottom" secondItem="pwb-4H-m1k" secondAttribute="bottom" id="F4w-aD-IlA"/>
+                            <constraint firstItem="VkX-qc-0I9" firstAttribute="centerX" secondItem="pwb-4H-m1k" secondAttribute="centerX" id="JOi-Zg-mWE"/>
+                            <constraint firstItem="pwb-4H-m1k" firstAttribute="leading" secondItem="LA3-DU-zlX" secondAttribute="leading" id="Xvq-1C-n2x"/>
+                            <constraint firstItem="LA3-DU-zlX" firstAttribute="bottom" secondItem="Vt8-Lj-Seg" secondAttribute="bottom" constant="12" id="dXv-LB-2ta"/>
+                            <constraint firstItem="pwb-4H-m1k" firstAttribute="top" secondItem="du4-SO-X4G" secondAttribute="top" id="hYt-FY-Kp8"/>
+                            <constraint firstItem="LA3-DU-zlX" firstAttribute="trailing" secondItem="Vt8-Lj-Seg" secondAttribute="trailing" constant="19" id="yCh-5r-hxf"/>
+                            <constraint firstItem="Vt8-Lj-Seg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="du4-SO-X4G" secondAttribute="leading" constant="20" symbolic="YES" id="zVm-fJ-2JN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LA3-DU-zlX"/>
+                    </view>
+                    <connections>
+                        <outlet property="aftergameImageView" destination="Eso-13-jhx" id="7LQ-uT-0OK"/>
+                        <outlet property="motivationLabel" destination="o12-On-lTF" id="kDo-hQ-rON"/>
+                        <outlet property="scoreLabel" destination="ahW-Cv-f0s" id="Fcs-za-MFF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K6w-HI-MVZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="920.79999999999995" y="777.66116941529242"/>
         </scene>
         <!--Level1 View Controller-->
         <scene sceneID="2mY-6k-75P">
@@ -265,7 +347,8 @@
                         <outlet property="progressImageView" destination="8V2-tb-pfj" id="wbc-ld-Cn4"/>
                         <outlet property="secondButton" destination="4w6-gL-cgZ" id="wcy-UU-Uy0"/>
                         <outlet property="thirdButton" destination="dRL-d6-1rg" id="5a3-2m-1pO"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="toMenuSegue" id="phQ-yt-sWd"/>
+                        <segue destination="mWk-cb-tRW" kind="show" identifier="afterGameSegue" id="4Lp-IW-lr2"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toMenuSegue" id="kbc-bB-j9H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yCa-iY-Hq2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -279,9 +362,15 @@
         <image name="Incorrect!" width="124" height="67"/>
         <image name="LevelProgress" width="290" height="41"/>
         <image name="Sound button" width="142" height="142"/>
+        <image name="afterGameBg" width="375" height="667"/>
+        <image name="aftergameRectangle" width="178" height="57"/>
         <image name="answerRectangle" width="141" height="74"/>
         <image name="menuBackground" width="375" height="667"/>
         <image name="menuCellRect" width="194" height="194"/>
         <image name="resetButton" width="56" height="56"/>
+        <image name="roflan" width="97" height="113"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="A43-Mr-bKh"/>
+    </inferredMetricsTieBreakers>
 </document>

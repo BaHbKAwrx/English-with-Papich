@@ -99,6 +99,14 @@ class Level1ViewController: UIViewController {
         configShapeLayer(overShapeLayer)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let afterGameVC = segue.destination as? AftergameViewController {
+            afterGameVC.correctAnswers = score
+        }
+        
+    }
+    
     // MARK: - Methods
     
     func configShapeLayer(_ shapeLayer: CAShapeLayer) {
@@ -147,7 +155,7 @@ class Level1ViewController: UIViewController {
             
             
         } else {
-            performSegue(withIdentifier: "toMenuSegue", sender: self)
+            performSegue(withIdentifier: "afterGameSegue", sender: self)
         }
         
         

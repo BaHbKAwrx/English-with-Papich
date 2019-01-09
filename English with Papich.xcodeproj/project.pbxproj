@@ -102,6 +102,11 @@
 		62D246B221E4FD930086776E /* forward.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 62D2465C21E4FD930086776E /* forward.mp3 */; };
 		62D246B321E4FD930086776E /* Thats inredible.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 62D2465D21E4FD930086776E /* Thats inredible.mp3 */; };
 		62D246B421E4FD930086776E /* kill.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 62D2465E21E4FD930086776E /* kill.mp3 */; };
+		62D246B621E64CBA0086776E /* AftergameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D246B521E64CBA0086776E /* AftergameViewController.swift */; };
+		62D246BC21E658D40086776E /* изи катка.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 62D246B821E658D40086776E /* изи катка.mp3 */; };
+		62D246BD21E658D40086776E /* добрый почонтек.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 62D246B921E658D40086776E /* добрый почонтек.mp3 */; };
+		62D246BE21E658D40086776E /* опыт 10+ лет.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 62D246BA21E658D40086776E /* опыт 10+ лет.mp3 */; };
+		62D246BF21E658D40086776E /* Чемпион зверей и людей.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 62D246BB21E658D40086776E /* Чемпион зверей и людей.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -202,6 +207,11 @@
 		62D2465C21E4FD930086776E /* forward.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = forward.mp3; sourceTree = "<group>"; };
 		62D2465D21E4FD930086776E /* Thats inredible.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Thats inredible.mp3"; sourceTree = "<group>"; };
 		62D2465E21E4FD930086776E /* kill.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kill.mp3; sourceTree = "<group>"; };
+		62D246B521E64CBA0086776E /* AftergameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AftergameViewController.swift; sourceTree = "<group>"; };
+		62D246B821E658D40086776E /* изи катка.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "изи катка.mp3"; sourceTree = "<group>"; };
+		62D246B921E658D40086776E /* добрый почонтек.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "добрый почонтек.mp3"; sourceTree = "<group>"; };
+		62D246BA21E658D40086776E /* опыт 10+ лет.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "опыт 10+ лет.mp3"; sourceTree = "<group>"; };
+		62D246BB21E658D40086776E /* Чемпион зверей и людей.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Чемпион зверей и людей.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +263,7 @@
 			children = (
 				62AF5F1A21E393AE00DE4FE7 /* MenuViewController.swift */,
 				62D2460321E3C8FA0086776E /* Level1ViewController.swift */,
+				62D246B521E64CBA0086776E /* AftergameViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -276,6 +287,7 @@
 		62D2460821E4FC7B0086776E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				62D246B721E658D40086776E /* Фразы на русском */,
 				62D2461A21E4FD8F0086776E /* after.mp3 */,
 				62D2461D21E4FD8F0086776E /* ascertain.mp3 */,
 				62D2461221E4FD8E0086776E /* ascertain2.mp3 */,
@@ -366,6 +378,17 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		62D246B721E658D40086776E /* Фразы на русском */ = {
+			isa = PBXGroup;
+			children = (
+				62D246B821E658D40086776E /* изи катка.mp3 */,
+				62D246B921E658D40086776E /* добрый почонтек.mp3 */,
+				62D246BA21E658D40086776E /* опыт 10+ лет.mp3 */,
+				62D246BB21E658D40086776E /* Чемпион зверей и людей.mp3 */,
+			);
+			path = "Фразы на русском";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -438,6 +461,7 @@
 				62D2468021E4FD930086776E /* respite.mp3 in Resources */,
 				62D2468121E4FD930086776E /* seven.mp3 in Resources */,
 				62D2469E21E4FD930086776E /* take gem.mp3 in Resources */,
+				62D246BE21E658D40086776E /* опыт 10+ лет.mp3 in Resources */,
 				62D2468221E4FD930086776E /* What is wrong with you.mp3 in Resources */,
 				62D2468621E4FD930086776E /* extraordinary.mp3 in Resources */,
 				62D2466321E4FD930086776E /* mayhem.mp3 in Resources */,
@@ -492,16 +516,19 @@
 				62D2467B21E4FD930086776E /* take my land.mp3 in Resources */,
 				62D2468921E4FD930086776E /* I dropped.mp3 in Resources */,
 				62D2466C21E4FD930086776E /* consume.mp3 in Resources */,
+				62D246BC21E658D40086776E /* изи катка.mp3 in Resources */,
 				62D2467421E4FD930086776E /* old man.mp3 in Resources */,
 				62D2469221E4FD930086776E /* non-native.mp3 in Resources */,
 				62D2469F21E4FD930086776E /* think.mp3 in Resources */,
 				62D246AA21E4FD930086776E /* grain.mp3 in Resources */,
 				62D2469B21E4FD930086776E /* invoice.mp3 in Resources */,
 				62D246A721E4FD930086776E /* ukraine.mp3 in Resources */,
+				62D246BF21E658D40086776E /* Чемпион зверей и людей.mp3 in Resources */,
 				62AF5F2321E393AF00DE4FE7 /* Assets.xcassets in Resources */,
 				62D2467221E4FD930086776E /* I am better than you.mp3 in Resources */,
 				62AF5F1E21E393AE00DE4FE7 /* Main.storyboard in Resources */,
 				62D246AD21E4FD930086776E /* before you know its grown.mp3 in Resources */,
+				62D246BD21E658D40086776E /* добрый почонтек.mp3 in Resources */,
 				62D2468F21E4FD930086776E /* english learning.mp3 in Resources */,
 				62D2467521E4FD930086776E /* thick.mp3 in Resources */,
 				62D246AC21E4FD930086776E /* retards.mp3 in Resources */,
@@ -523,6 +550,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62D246B621E64CBA0086776E /* AftergameViewController.swift in Sources */,
 				62D2460421E3C8FA0086776E /* Level1ViewController.swift in Sources */,
 				62D2460621E4F16B0086776E /* FirstLevelQuestion.swift in Sources */,
 				62AF5F1B21E393AE00DE4FE7 /* MenuViewController.swift in Sources */,
