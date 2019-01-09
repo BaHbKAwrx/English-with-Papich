@@ -30,7 +30,16 @@ class AftergameViewController: UIViewController {
         
         aftergameImageView.transform = CGAffineTransform(scaleX: 0, y: 0)
 
-        scoreLabel.text = "\(correctAnswers) вопросов из 10"
+        switch correctAnswers {
+        case 0,5,6,7,8,9,10:
+            scoreLabel.text = "\(correctAnswers) вопросов из 10"
+        case 1:
+            scoreLabel.text = "\(correctAnswers) вопрос из 10"
+        case 2,3,4:
+            scoreLabel.text = "\(correctAnswers) вопроса из 10"
+        default:
+            scoreLabel.text = "10 вопросов из 10"
+        }
         
         switch correctAnswers {
         case 0...4:
@@ -42,7 +51,7 @@ class AftergameViewController: UIViewController {
         case 9...10:
             configureResult(withText: textArray[3], withImage: imagesArray[3] ?? UIImage(), withSound: soundNamesArray[3])
         default:
-            configureResult(withText: textArray[1], withImage: imagesArray[2] ?? UIImage(), withSound: soundNamesArray[0])
+            configureResult(withText: textArray[3], withImage: imagesArray[3] ?? UIImage(), withSound: soundNamesArray[3])
         }
 
         // Sound
