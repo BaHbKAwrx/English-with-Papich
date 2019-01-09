@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -121,6 +122,7 @@
                     <connections>
                         <outlet property="menuTableView" destination="hWa-ug-ZsT" id="Dk8-X2-Xqh"/>
                         <segue destination="gxB-Cg-9XJ" kind="show" identifier="firstLevelSegue" id="ZTf-pN-f4x"/>
+                        <segue destination="WPW-VF-mAY" kind="show" identifier="secondLevelSegue" id="h2b-Rk-PWc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -207,7 +209,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K6w-HI-MVZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="920.79999999999995" y="777.66116941529242"/>
+            <point key="canvasLocation" x="-743" y="1551"/>
         </scene>
         <!--Level1 View Controller-->
         <scene sceneID="2mY-6k-75P">
@@ -355,12 +357,170 @@
             </objects>
             <point key="canvasLocation" x="33" y="778"/>
         </scene>
+        <!--Level2 View Controller-->
+        <scene sceneID="BO1-X7-0Cb">
+            <objects>
+                <viewController id="WPW-VF-mAY" customClass="Level2ViewController" customModule="English_with_Papich" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZG8-Zr-HZF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuBackground" translatesAutoresizingMaskIntoConstraints="NO" id="RyE-rF-iUI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ixw-8y-q29">
+                                <rect key="frame" x="16" y="32" width="56" height="63"/>
+                                <state key="normal" image="Back button"/>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="WPW-VF-mAY" eventType="touchUpInside" id="Do2-MC-kYQ"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LevelProgress" translatesAutoresizingMaskIntoConstraints="NO" id="q1N-yr-ttc">
+                                <rect key="frame" x="42" y="606" width="290" height="41"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="KpY-r5-AVe">
+                                <rect key="frame" x="9.5" y="109" width="356.5" height="449"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6IC-Dz-0FH">
+                                        <rect key="frame" x="0.0" y="0.0" width="356.5" height="286.5"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Papzan" translatesAutoresizingMaskIntoConstraints="NO" id="gZc-Wn-260">
+                                                <rect key="frame" x="0.0" y="0.0" width="356.5" height="223"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="gZc-Wn-260" secondAttribute="height" multiplier="75:47" id="MsI-yR-FVC"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="2yn-Yg-i0d">
+                                                <rect key="frame" x="38.5" y="223" width="280" height="63.5"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Correct!" translatesAutoresizingMaskIntoConstraints="NO" id="FO3-kd-OdD">
+                                                        <rect key="frame" x="0.0" y="0.0" width="106" height="63.5"/>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Incorrect!" translatesAutoresizingMaskIntoConstraints="NO" id="ZxV-ie-0v8">
+                                                        <rect key="frame" x="156" y="0.0" width="124" height="63.5"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Q5s-WG-rhf">
+                                        <rect key="frame" x="33.5" y="301.5" width="290" height="147.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="F7O-ET-vpl">
+                                                <rect key="frame" x="0.0" y="0.0" width="290" height="70"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kL-q5-k6v">
+                                                        <rect key="frame" x="0.0" y="0.0" width="141" height="70"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="16"/>
+                                                        <inset key="contentEdgeInsets" minX="13" minY="0.0" maxX="13" maxY="0.0"/>
+                                                        <state key="normal" title="Мусор" backgroundImage="answerRectangle">
+                                                            <color key="titleColor" red="0.69411764710000001" green="0.22352941179999999" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="answerButtonTapped:" destination="WPW-VF-mAY" eventType="touchUpInside" id="poI-4O-MwU"/>
+                                                            <action selector="answerButtonTapped:" destination="gxB-Cg-9XJ" eventType="touchUpInside" id="txp-t5-jCe"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGA-fA-UtV">
+                                                        <rect key="frame" x="149" y="0.0" width="141" height="70"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="16"/>
+                                                        <inset key="contentEdgeInsets" minX="13" minY="0.0" maxX="13" maxY="0.0"/>
+                                                        <state key="normal" title="Вещи" backgroundImage="answerRectangle">
+                                                            <color key="titleColor" red="0.69411764710000001" green="0.22352941179999999" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="answerButtonTapped:" destination="WPW-VF-mAY" eventType="touchUpInside" id="9wS-oO-lxy"/>
+                                                            <action selector="answerButtonTapped:" destination="gxB-Cg-9XJ" eventType="touchUpInside" id="LXu-Cx-yVZ"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KJL-hy-EhN">
+                                                <rect key="frame" x="0.0" y="78" width="290" height="69.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25c-K8-mJw">
+                                                        <rect key="frame" x="0.0" y="0.0" width="141" height="69.5"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="16"/>
+                                                        <inset key="contentEdgeInsets" minX="13" minY="0.0" maxX="13" maxY="0.0"/>
+                                                        <state key="normal" title="Союзник" backgroundImage="answerRectangle">
+                                                            <color key="titleColor" red="0.69411764710000001" green="0.22352941179999999" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="answerButtonTapped:" destination="WPW-VF-mAY" eventType="touchUpInside" id="Yyb-YK-IHb"/>
+                                                            <action selector="answerButtonTapped:" destination="gxB-Cg-9XJ" eventType="touchUpInside" id="mJH-ZW-7LD"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hDC-cS-c8V">
+                                                        <rect key="frame" x="149" y="0.0" width="141" height="69.5"/>
+                                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="16"/>
+                                                        <inset key="contentEdgeInsets" minX="13" minY="0.0" maxX="13" maxY="0.0"/>
+                                                        <state key="normal" title="Авария" backgroundImage="answerRectangle">
+                                                            <color key="titleColor" red="0.69411764710000001" green="0.22352941179999999" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="answerButtonTapped:" destination="WPW-VF-mAY" eventType="touchUpInside" id="0af-ER-ejW"/>
+                                                            <action selector="answerButtonTapped:" destination="gxB-Cg-9XJ" eventType="touchUpInside" id="hva-BS-nDK"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trash" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="xX0-gr-Oej">
+                                <rect key="frame" x="148" y="109" width="218" height="116"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="24"/>
+                                <color key="textColor" red="0.69411764710000001" green="0.22352941179999999" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NFz-lb-3FT" firstAttribute="bottom" secondItem="q1N-yr-ttc" secondAttribute="bottom" constant="20" id="0xk-CO-rS1"/>
+                            <constraint firstItem="RyE-rF-iUI" firstAttribute="leading" secondItem="NFz-lb-3FT" secondAttribute="leading" id="By5-w3-bxD"/>
+                            <constraint firstItem="Ixw-8y-q29" firstAttribute="top" secondItem="NFz-lb-3FT" secondAttribute="top" constant="12" id="Jl8-w4-sH8"/>
+                            <constraint firstItem="xX0-gr-Oej" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ZG8-Zr-HZF" secondAttribute="leading" constant="20" symbolic="YES" id="Mmv-HS-fPF"/>
+                            <constraint firstAttribute="bottom" secondItem="RyE-rF-iUI" secondAttribute="bottom" id="Nrg-Wu-UZ1"/>
+                            <constraint firstItem="q1N-yr-ttc" firstAttribute="centerX" secondItem="RyE-rF-iUI" secondAttribute="centerX" id="OQH-RX-ohO"/>
+                            <constraint firstItem="KpY-r5-AVe" firstAttribute="centerY" secondItem="RyE-rF-iUI" secondAttribute="centerY" id="QIx-ZZ-Unf"/>
+                            <constraint firstItem="RyE-rF-iUI" firstAttribute="top" secondItem="ZG8-Zr-HZF" secondAttribute="top" id="RBL-XV-WVg"/>
+                            <constraint firstItem="xX0-gr-Oej" firstAttribute="height" secondItem="gZc-Wn-260" secondAttribute="height" multiplier="0.52" id="VMu-dp-DPF"/>
+                            <constraint firstItem="KpY-r5-AVe" firstAttribute="centerX" secondItem="RyE-rF-iUI" secondAttribute="centerX" id="X2n-XN-Uk4"/>
+                            <constraint firstItem="gZc-Wn-260" firstAttribute="width" secondItem="RyE-rF-iUI" secondAttribute="width" multiplier="0.95" id="b6w-nR-xAD"/>
+                            <constraint firstItem="xX0-gr-Oej" firstAttribute="trailing" secondItem="gZc-Wn-260" secondAttribute="trailing" id="dwT-Wb-kQv"/>
+                            <constraint firstItem="xX0-gr-Oej" firstAttribute="width" secondItem="gZc-Wn-260" secondAttribute="width" multiplier="0.61" id="er5-zT-sBI"/>
+                            <constraint firstItem="RyE-rF-iUI" firstAttribute="trailing" secondItem="NFz-lb-3FT" secondAttribute="trailing" id="feN-3T-r6l"/>
+                            <constraint firstItem="Ixw-8y-q29" firstAttribute="leading" secondItem="NFz-lb-3FT" secondAttribute="leading" constant="16" id="i7T-0J-C1y"/>
+                            <constraint firstItem="xX0-gr-Oej" firstAttribute="top" secondItem="gZc-Wn-260" secondAttribute="top" id="reG-RT-pIt"/>
+                            <constraint firstItem="q1N-yr-ttc" firstAttribute="width" secondItem="RyE-rF-iUI" secondAttribute="width" multiplier="0.77333" id="wHC-za-dPs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NFz-lb-3FT"/>
+                    </view>
+                    <connections>
+                        <outlet property="correctLabel" destination="FO3-kd-OdD" id="hCb-J8-HiO"/>
+                        <outlet property="firstButton" destination="5kL-q5-k6v" id="CQX-6L-dVy"/>
+                        <outlet property="forthButton" destination="hDC-cS-c8V" id="h0P-iJ-fdZ"/>
+                        <outlet property="incorrectLabel" destination="ZxV-ie-0v8" id="YiL-68-Gq6"/>
+                        <outlet property="progressImageView" destination="q1N-yr-ttc" id="e4k-Dh-BIO"/>
+                        <outlet property="questionTextLabel" destination="xX0-gr-Oej" id="Qgo-Vm-M3r"/>
+                        <outlet property="secondButton" destination="YGA-fA-UtV" id="akE-YY-3MZ"/>
+                        <outlet property="thirdButton" destination="25c-K8-mJw" id="rVi-Rs-sFD"/>
+                        <segue destination="mWk-cb-tRW" kind="show" identifier="afterGameSegue2" id="1hb-XB-gw2"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toMenuSegue2" id="izt-PU-0er"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T5V-Sq-oTA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.79999999999995" y="777.66116941529242"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Back button" width="56" height="63"/>
         <image name="Correct!" width="106" height="59"/>
         <image name="Incorrect!" width="124" height="67"/>
         <image name="LevelProgress" width="290" height="41"/>
+        <image name="Papzan" width="348" height="235"/>
         <image name="Sound button" width="142" height="142"/>
         <image name="afterGameBg" width="375" height="667"/>
         <image name="aftergameRectangle" width="178" height="57"/>
@@ -371,6 +531,7 @@
         <image name="roflan" width="97" height="113"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="A43-Mr-bKh"/>
+        <segue reference="1hb-XB-gw2"/>
+        <segue reference="izt-PU-0er"/>
     </inferredMetricsTieBreakers>
 </document>

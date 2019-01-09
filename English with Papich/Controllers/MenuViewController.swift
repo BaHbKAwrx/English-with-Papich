@@ -136,6 +136,7 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
         
         switch indexPath.row {
         case 0: performSegue(withIdentifier: "firstLevelSegue", sender: self)
+        case 1: performSegue(withIdentifier: "secondLevelSegue", sender: self)
         default: break
         }
         
