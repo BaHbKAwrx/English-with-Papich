@@ -615,6 +615,7 @@
                         <outlet property="correctLabel" destination="Kff-Lk-MoW" id="0hQ-iP-c4V"/>
                         <outlet property="incorrectLabel" destination="oup-3k-hnH" id="eXk-xb-vON"/>
                         <outlet property="progressImageView" destination="Ovg-Vp-Qdz" id="YrD-n9-j1K"/>
+                        <outlet property="stackView" destination="1WY-oJ-cXU" id="MEn-VU-6Bp"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="toMenuSegue3" id="2OA-sC-cOM"/>
                         <segue destination="mWk-cb-tRW" kind="show" identifier="afterGameSegue3" id="zS1-05-1GV"/>
                     </connections>

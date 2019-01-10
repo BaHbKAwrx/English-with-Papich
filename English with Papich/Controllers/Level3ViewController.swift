@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import CoreData
 
-class Level3ViewController: UIViewController {
+class Level3ViewController: UIViewController, UITextFieldDelegate {
     
     //Progress ShapeLayer
     var shapeLayer: CAShapeLayer! {
@@ -39,6 +39,7 @@ class Level3ViewController: UIViewController {
     @IBOutlet weak var correctLabel: UIImageView!
     @IBOutlet weak var incorrectLabel: UIImageView!
     @IBOutlet weak var answerTextField: UITextField!
+    @IBOutlet weak var stackView: UIStackView!
     
     //CoreData vars
     lazy var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -53,6 +54,8 @@ class Level3ViewController: UIViewController {
     // MARK: - VC Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        answerTextField.delegate = self
 
         questionsArray = initAllQuestions()
         
@@ -91,6 +94,11 @@ class Level3ViewController: UIViewController {
         configShapeLayer(overShapeLayer)
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let afterGameVC = segue.destination as? AftergameViewController {
@@ -99,7 +107,32 @@ class Level3ViewController: UIViewController {
         
     }
     
+    // MARK: - textField delegate
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        stackUpAnimation()
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        stackDownAnimation()
+    }
+    
     // MARK: - Methods
+    
+    func stackUpAnimation() {
+        UIView.animate(withDuration: 0.3) {
+            self.stackView.center.y = 30 + self.stackView.frame.height / 2
+        }
+    }
+    func stackDownAnimation() {
+        UIView.animate(withDuration: 0.8) {
+            self.stackView.center.y = self.view.center.y
+        }
+    }
     
     func configShapeLayer(_ shapeLayer: CAShapeLayer) {
         shapeLayer.frame = view.bounds
