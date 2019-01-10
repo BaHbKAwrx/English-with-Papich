@@ -542,6 +542,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxe-Gq-z5p">
                                                         <rect key="frame" x="0.0" y="0.0" width="142" height="142"/>
                                                         <state key="normal" image="Sound button"/>
+                                                        <connections>
+                                                            <action selector="soundButtonTapped:" destination="Kon-or-nR9" eventType="touchUpInside" id="o72-dt-RrV"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -576,6 +579,9 @@
                                                 <state key="normal" title="Next" backgroundImage="nextRectangle">
                                                     <color key="titleColor" red="0.9999127984046936" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="nextButtonTapped:" destination="Kon-or-nR9" eventType="touchUpInside" id="m5b-54-Gqv"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -605,6 +611,10 @@
                         <viewLayoutGuide key="safeArea" id="pfs-Bf-Qwn"/>
                     </view>
                     <connections>
+                        <outlet property="answerTextField" destination="54y-4f-bf0" id="joW-3Y-6gw"/>
+                        <outlet property="correctLabel" destination="Kff-Lk-MoW" id="0hQ-iP-c4V"/>
+                        <outlet property="incorrectLabel" destination="oup-3k-hnH" id="eXk-xb-vON"/>
+                        <outlet property="progressImageView" destination="Ovg-Vp-Qdz" id="YrD-n9-j1K"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="toMenuSegue3" id="2OA-sC-cOM"/>
                         <segue destination="mWk-cb-tRW" kind="show" identifier="afterGameSegue3" id="zS1-05-1GV"/>
                     </connections>

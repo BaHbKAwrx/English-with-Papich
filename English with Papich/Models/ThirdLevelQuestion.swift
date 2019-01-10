@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+struct ThirdLevelQuestion {
+    var sound: String
+    var correctAnswer: String
+}
