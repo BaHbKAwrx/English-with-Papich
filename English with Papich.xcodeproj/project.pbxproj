@@ -108,6 +108,7 @@
 		62D246BE21E658D40086776E /* опыт 10+ лет.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 62D246BA21E658D40086776E /* опыт 10+ лет.mp3 */; };
 		62D246BF21E658D40086776E /* Чемпион зверей и людей.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 62D246BB21E658D40086776E /* Чемпион зверей и людей.mp3 */; };
 		62D246C121E678700086776E /* Level2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D246C021E678700086776E /* Level2ViewController.swift */; };
+		62D246C321E76DA90086776E /* SecondLevelQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D246C221E76DA90086776E /* SecondLevelQuestion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -214,6 +215,7 @@
 		62D246BA21E658D40086776E /* опыт 10+ лет.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "опыт 10+ лет.mp3"; sourceTree = "<group>"; };
 		62D246BB21E658D40086776E /* Чемпион зверей и людей.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Чемпион зверей и людей.mp3"; sourceTree = "<group>"; };
 		62D246C021E678700086776E /* Level2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level2ViewController.swift; sourceTree = "<group>"; };
+		62D246C221E76DA90086776E /* SecondLevelQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondLevelQuestion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				62D2460521E4F16B0086776E /* FirstLevelQuestion.swift */,
+				62D246C221E76DA90086776E /* SecondLevelQuestion.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -560,6 +563,7 @@
 				62AF5F1921E393AE00DE4FE7 /* AppDelegate.swift in Sources */,
 				62D2460121E39DDA0086776E /* MenuTableViewCell.swift in Sources */,
 				62D246C121E678700086776E /* Level2ViewController.swift in Sources */,
+				62D246C321E76DA90086776E /* SecondLevelQuestion.swift in Sources */,
 				62AF5F2121E393AE00DE4FE7 /* English_with_Papich.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
