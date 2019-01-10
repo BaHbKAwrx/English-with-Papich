@@ -109,6 +109,8 @@
 		62D246BF21E658D40086776E /* Чемпион зверей и людей.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 62D246BB21E658D40086776E /* Чемпион зверей и людей.mp3 */; };
 		62D246C121E678700086776E /* Level2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D246C021E678700086776E /* Level2ViewController.swift */; };
 		62D246C321E76DA90086776E /* SecondLevelQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D246C221E76DA90086776E /* SecondLevelQuestion.swift */; };
+		62D246C521E77AA40086776E /* Level3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D246C421E77AA40086776E /* Level3ViewController.swift */; };
+		62D246C721E786680086776E /* Level4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D246C621E786680086776E /* Level4ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -216,6 +218,8 @@
 		62D246BB21E658D40086776E /* Чемпион зверей и людей.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Чемпион зверей и людей.mp3"; sourceTree = "<group>"; };
 		62D246C021E678700086776E /* Level2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level2ViewController.swift; sourceTree = "<group>"; };
 		62D246C221E76DA90086776E /* SecondLevelQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondLevelQuestion.swift; sourceTree = "<group>"; };
+		62D246C421E77AA40086776E /* Level3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level3ViewController.swift; sourceTree = "<group>"; };
+		62D246C621E786680086776E /* Level4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level4ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +272,8 @@
 				62AF5F1A21E393AE00DE4FE7 /* MenuViewController.swift */,
 				62D2460321E3C8FA0086776E /* Level1ViewController.swift */,
 				62D246C021E678700086776E /* Level2ViewController.swift */,
+				62D246C421E77AA40086776E /* Level3ViewController.swift */,
+				62D246C621E786680086776E /* Level4ViewController.swift */,
 				62D246B521E64CBA0086776E /* AftergameViewController.swift */,
 			);
 			path = Controllers;
@@ -557,6 +563,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				62D246B621E64CBA0086776E /* AftergameViewController.swift in Sources */,
+				62D246C721E786680086776E /* Level4ViewController.swift in Sources */,
 				62D2460421E3C8FA0086776E /* Level1ViewController.swift in Sources */,
 				62D2460621E4F16B0086776E /* FirstLevelQuestion.swift in Sources */,
 				62AF5F1B21E393AE00DE4FE7 /* MenuViewController.swift in Sources */,
@@ -565,6 +572,7 @@
 				62D246C121E678700086776E /* Level2ViewController.swift in Sources */,
 				62D246C321E76DA90086776E /* SecondLevelQuestion.swift in Sources */,
 				62AF5F2121E393AE00DE4FE7 /* English_with_Papich.xcdatamodeld in Sources */,
+				62D246C521E77AA40086776E /* Level3ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
