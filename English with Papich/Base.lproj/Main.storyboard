@@ -561,7 +561,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="2xJ-Cb-YqO">
                                         <rect key="frame" x="14" y="244" width="252" height="124"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Trash" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="15" background="fieldRectangle" translatesAutoresizingMaskIntoConstraints="NO" id="54y-4f-bf0">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type in English" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="15" background="fieldRectangle" translatesAutoresizingMaskIntoConstraints="NO" id="54y-4f-bf0">
                                                 <rect key="frame" x="0.0" y="0.0" width="252" height="37"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="37" id="Pnx-HA-YVR"/>
@@ -672,6 +672,9 @@
                                                         <state key="normal" title="Trash" backgroundImage="answerRectangle">
                                                             <color key="titleColor" red="0.69411764710000001" green="0.22352941179999999" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="answerButtonTapped:" destination="1iS-Fg-YUN" eventType="touchUpInside" id="Yxg-km-gS6"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVk-FQ-HGY">
                                                         <rect key="frame" x="149" y="0.0" width="141" height="70"/>
@@ -680,6 +683,9 @@
                                                         <state key="normal" title="Crash" backgroundImage="answerRectangle">
                                                             <color key="titleColor" red="0.69411764710000001" green="0.22352941179999999" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="answerButtonTapped:" destination="1iS-Fg-YUN" eventType="touchUpInside" id="xIz-2U-mu2"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -693,6 +699,9 @@
                                                         <state key="normal" title="Slash" backgroundImage="answerRectangle">
                                                             <color key="titleColor" red="0.69411764710000001" green="0.22352941179999999" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="answerButtonTapped:" destination="1iS-Fg-YUN" eventType="touchUpInside" id="qsj-Jc-s2t"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbI-k3-k9i">
                                                         <rect key="frame" x="149" y="0.0" width="141" height="69.5"/>
@@ -701,6 +710,9 @@
                                                         <state key="normal" title="Smash" backgroundImage="answerRectangle">
                                                             <color key="titleColor" red="0.69411764710000001" green="0.22352941179999999" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="answerButtonTapped:" destination="1iS-Fg-YUN" eventType="touchUpInside" id="7Mo-2b-yl4"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -738,6 +750,14 @@
                         <viewLayoutGuide key="safeArea" id="Fuf-TJ-yfk"/>
                     </view>
                     <connections>
+                        <outlet property="correctLabel" destination="IhA-i5-rdO" id="ygw-cf-1AG"/>
+                        <outlet property="firstButton" destination="8az-gC-PoO" id="mqA-bN-fDm"/>
+                        <outlet property="forthButton" destination="xbI-k3-k9i" id="cX8-aD-nle"/>
+                        <outlet property="incorrectLabel" destination="1Wr-ed-xsJ" id="DTN-hC-lgR"/>
+                        <outlet property="progressImageView" destination="OTC-b9-TaP" id="q2e-6b-580"/>
+                        <outlet property="questionTextLabel" destination="Ud4-Cc-qg6" id="CRj-SE-CQM"/>
+                        <outlet property="secondButton" destination="vVk-FQ-HGY" id="zHW-Hw-zr9"/>
+                        <outlet property="thirdButton" destination="XLU-Qa-Wbb" id="89B-Ba-35u"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="toMenuSegue4" id="I9b-DX-H93"/>
                         <segue destination="mWk-cb-tRW" kind="show" identifier="afterGameSegue4" id="H23-iB-R1T"/>
                     </connections>
@@ -765,7 +785,7 @@
         <image name="roflan" width="97" height="113"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="H23-iB-R1T"/>
-        <segue reference="I9b-DX-H93"/>
+        <segue reference="zS1-05-1GV"/>
+        <segue reference="2OA-sC-cOM"/>
     </inferredMetricsTieBreakers>
 </document>
