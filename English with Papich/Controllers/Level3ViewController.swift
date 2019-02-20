@@ -92,6 +92,8 @@ class Level3ViewController: UIViewController, UITextFieldDelegate {
         
         configShapeLayer(shapeLayer)
         configShapeLayer(overShapeLayer)
+        
+        stackView.center = view.center
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

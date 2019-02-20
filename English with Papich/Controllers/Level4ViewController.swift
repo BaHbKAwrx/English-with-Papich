@@ -136,6 +136,13 @@ class Level4ViewController: UIViewController {
     func goToNextQuestion() {
         
         if questionNumber < 9 {
+            
+            //making buttons active
+            firstButton.isEnabled = true
+            secondButton.isEnabled = true
+            thirdButton.isEnabled = true
+            forthButton.isEnabled = true
+            
             questionNumber += 1
             firstButton.setTitle(questionsArray[questionNumbersArr[questionNumber]].allAnswers[0], for: .normal)
             secondButton.setTitle(questionsArray[questionNumbersArr[questionNumber]].allAnswers[1], for: .normal)
@@ -174,6 +181,13 @@ class Level4ViewController: UIViewController {
     }
     
     @IBAction func answerButtonTapped(_ sender: UIButton) {
+        
+        //making buttons unactive
+        firstButton.isEnabled = false
+        secondButton.isEnabled = false
+        thirdButton.isEnabled = false
+        forthButton.isEnabled = false
+        
         
         if sender.titleLabel?.text == questionsArray[questionNumbersArr[questionNumber]].correctAnswer {
             print("Correct")

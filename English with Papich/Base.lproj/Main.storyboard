@@ -530,16 +530,17 @@
                                     <action selector="backButtonTapped:" destination="Kon-or-nR9" eventType="touchUpInside" id="Zlu-aS-kDc"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="1WY-oJ-cXU">
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillProportionally" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="1WY-oJ-cXU">
                                 <rect key="frame" x="47.5" y="149.5" width="280" height="368"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Zt1-LQ-eyX">
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Zt1-LQ-eyX">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="229"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="spi-8G-KP9">
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="spi-8G-KP9">
                                                 <rect key="frame" x="69" y="0.0" width="142" height="142"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxe-Gq-z5p">
+                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxe-Gq-z5p">
                                                         <rect key="frame" x="0.0" y="0.0" width="142" height="142"/>
                                                         <state key="normal" image="Sound button"/>
                                                         <connections>
@@ -548,23 +549,23 @@
                                                     </button>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="rCC-d4-NAk">
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillProportionally" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="rCC-d4-NAk">
                                                 <rect key="frame" x="0.0" y="162" width="280" height="67"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Correct!" translatesAutoresizingMaskIntoConstraints="NO" id="Kff-Lk-MoW">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Correct!" translatesAutoresizingMaskIntoConstraints="NO" id="Kff-Lk-MoW">
                                                         <rect key="frame" x="0.0" y="0.0" width="106" height="67"/>
                                                     </imageView>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Incorrect!" translatesAutoresizingMaskIntoConstraints="NO" id="oup-3k-hnH">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Incorrect!" translatesAutoresizingMaskIntoConstraints="NO" id="oup-3k-hnH">
                                                         <rect key="frame" x="156" y="0.0" width="124" height="67"/>
                                                     </imageView>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="2xJ-Cb-YqO">
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="2xJ-Cb-YqO">
                                         <rect key="frame" x="14" y="244" width="252" height="124"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type in English" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="15" background="fieldRectangle" translatesAutoresizingMaskIntoConstraints="NO" id="54y-4f-bf0">
+                                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type in English" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="15" background="fieldRectangle" translatesAutoresizingMaskIntoConstraints="NO" id="54y-4f-bf0">
                                                 <rect key="frame" x="0.0" y="0.0" width="252" height="37"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="37" id="Pnx-HA-YVR"/>
@@ -573,7 +574,7 @@
                                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HvS-GV-yAc">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HvS-GV-yAc">
                                                 <rect key="frame" x="57" y="52" width="138" height="72"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
                                                 <state key="normal" title="Next" backgroundImage="nextRectangle">
@@ -596,17 +597,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Ovg-Vp-Qdz" firstAttribute="width" secondItem="Eql-N5-jGT" secondAttribute="width" multiplier="0.77333" id="00X-2U-V87"/>
-                            <constraint firstItem="Eql-N5-jGT" firstAttribute="top" secondItem="rtS-qE-pua" secondAttribute="top" id="0cT-9y-Byc"/>
-                            <constraint firstItem="Eql-N5-jGT" firstAttribute="trailing" secondItem="pfs-Bf-Qwn" secondAttribute="trailing" id="MDI-Y0-ZSm"/>
+                            <constraint firstAttribute="bottom" secondItem="Eql-N5-jGT" secondAttribute="bottom" id="0Og-cq-qT3"/>
+                            <constraint firstAttribute="trailing" secondItem="Eql-N5-jGT" secondAttribute="trailing" id="5w7-a1-rWQ"/>
+                            <constraint firstItem="Eql-N5-jGT" firstAttribute="leading" secondItem="rtS-qE-pua" secondAttribute="leading" id="Dr7-C0-FK0"/>
+                            <constraint firstItem="Ovg-Vp-Qdz" firstAttribute="width" secondItem="Eql-N5-jGT" secondAttribute="width" multiplier="0.77333" id="Svo-LL-JeQ"/>
                             <constraint firstItem="pfs-Bf-Qwn" firstAttribute="bottom" secondItem="Ovg-Vp-Qdz" secondAttribute="bottom" constant="20" id="Tof-T4-tsf"/>
                             <constraint firstItem="L4y-TA-MRB" firstAttribute="top" secondItem="pfs-Bf-Qwn" secondAttribute="top" constant="12" id="Xfc-fb-2w5"/>
-                            <constraint firstAttribute="bottom" secondItem="Eql-N5-jGT" secondAttribute="bottom" id="iwT-D5-Q06"/>
-                            <constraint firstItem="1WY-oJ-cXU" firstAttribute="centerX" secondItem="Eql-N5-jGT" secondAttribute="centerX" id="jBp-cZ-857"/>
-                            <constraint firstItem="Eql-N5-jGT" firstAttribute="leading" secondItem="pfs-Bf-Qwn" secondAttribute="leading" id="pfA-Tp-Wli"/>
-                            <constraint firstItem="Ovg-Vp-Qdz" firstAttribute="centerX" secondItem="Eql-N5-jGT" secondAttribute="centerX" id="pv9-ws-cB4"/>
+                            <constraint firstItem="Eql-N5-jGT" firstAttribute="top" secondItem="rtS-qE-pua" secondAttribute="top" id="pxN-Pa-cEG"/>
                             <constraint firstItem="L4y-TA-MRB" firstAttribute="leading" secondItem="pfs-Bf-Qwn" secondAttribute="leading" constant="16" id="sYv-Bd-A0f"/>
-                            <constraint firstItem="1WY-oJ-cXU" firstAttribute="centerY" secondItem="Eql-N5-jGT" secondAttribute="centerY" id="z9l-F3-d9E"/>
+                            <constraint firstItem="Ovg-Vp-Qdz" firstAttribute="centerX" secondItem="Eql-N5-jGT" secondAttribute="centerX" id="zNT-vI-e0e"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pfs-Bf-Qwn"/>
                     </view>
@@ -796,7 +795,7 @@
         <image name="roflan" width="97" height="113"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zS1-05-1GV"/>
-        <segue reference="2OA-sC-cOM"/>
+        <segue reference="4Lp-IW-lr2"/>
+        <segue reference="kbc-bB-j9H"/>
     </inferredMetricsTieBreakers>
 </document>
