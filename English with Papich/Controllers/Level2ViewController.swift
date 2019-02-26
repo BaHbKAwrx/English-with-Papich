@@ -279,7 +279,7 @@ extension Level2ViewController {
         resultArray.append(SecondLevelQuestion(question: "Meadow", correctAnswer: "Поляна", allAnswers: ["Поляна", "Окно", "Тень", "Вдова"]))
         resultArray.append(SecondLevelQuestion(question: "My mom", correctAnswer: "Моя мать", allAnswers: ["Моя жена", "Моя мать", "Моя бабушка", "Моя теща"]))
         resultArray.append(SecondLevelQuestion(question: "Next", correctAnswer: "Следующий", allAnswers: ["Последний", "Первый", "Следующий", "Предыдущий"]))
-        resultArray.append(SecondLevelQuestion(question: "Non-native", correctAnswer: "Неродной", allAnswers: ["Ненастоящий", "Неопытный", "Непростой", "Не родной"]))
+        resultArray.append(SecondLevelQuestion(question: "Non-native", correctAnswer: "Неродной", allAnswers: ["Ненастоящий", "Неопытный", "Непростой", "Неродной"]))
         resultArray.append(SecondLevelQuestion(question: "Old man", correctAnswer: "Старик", allAnswers: ["Старик", "Работник", "Студент", "Динозавр"]))
         resultArray.append(SecondLevelQuestion(question: "Outright", correctAnswer: "Открытый", allAnswers: ["Закрытый", "Открытый", "Честный", "Обманутый"]))
         resultArray.append(SecondLevelQuestion(question: "Portray", correctAnswer: "Изображать", allAnswers: ["Хвалить", "Ругать", "Изображать", "Сворачивать"]))
