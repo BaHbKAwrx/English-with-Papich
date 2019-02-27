@@ -11,6 +11,7 @@ import CoreData
 
 class Level4ViewController: UIViewController {
     
+    // MARK: - Const and vars declaration
     //Progress ShapeLayer
     var shapeLayer: CAShapeLayer! {
         didSet {
@@ -59,30 +60,10 @@ class Level4ViewController: UIViewController {
         questionsArray = initAllQuestions()
         
         questionNumbersArr = makeNumbersArray()
-        print(questionNumbersArr)
         
-        firstButton.setTitle(questionsArray[questionNumbersArr[questionNumber]].allAnswers[0], for: .normal)
-        secondButton.setTitle(questionsArray[questionNumbersArr[questionNumber]].allAnswers[1], for: .normal)
-        thirdButton.setTitle(questionsArray[questionNumbersArr[questionNumber]].allAnswers[2], for: .normal)
-        forthButton.setTitle(questionsArray[questionNumbersArr[questionNumber]].allAnswers[3], for: .normal)
+        setStartUI()
         
-        questionTextLabel.text = questionsArray[questionNumbersArr[questionNumber]].question
-        
-        correctLabel.alpha = 0
-        incorrectLabel.alpha = 0
-        
-        //Loading data from CoreData
-        let fetchRequest: NSFetchRequest<MenuLevel> = MenuLevel.fetchRequest()
-        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "levelNumber", ascending: true)]
-        //print(fetchRequest)
-        
-        do {
-            let results = try context.fetch(fetchRequest)
-            levels = results
-            //print(levels)
-        } catch {
-            print(error.localizedDescription)
-        }
+        loadCoreData()
         
         // Custom progress bar
         shapeLayer = CAShapeLayer()
@@ -110,6 +91,35 @@ class Level4ViewController: UIViewController {
     }
     
     // MARK: - Methods
+    func setStartUI() {
+        
+        firstButton.setTitle(questionsArray[questionNumbersArr[questionNumber]].allAnswers[0], for: .normal)
+        secondButton.setTitle(questionsArray[questionNumbersArr[questionNumber]].allAnswers[1], for: .normal)
+        thirdButton.setTitle(questionsArray[questionNumbersArr[questionNumber]].allAnswers[2], for: .normal)
+        forthButton.setTitle(questionsArray[questionNumbersArr[questionNumber]].allAnswers[3], for: .normal)
+        
+        questionTextLabel.text = questionsArray[questionNumbersArr[questionNumber]].question
+        
+        correctLabel.alpha = 0
+        incorrectLabel.alpha = 0
+        
+    }
+    
+    func loadCoreData() {
+        
+        //Loading data from CoreData
+        let fetchRequest: NSFetchRequest<MenuLevel> = MenuLevel.fetchRequest()
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "levelNumber", ascending: true)]
+        
+        do {
+            let results = try context.fetch(fetchRequest)
+            levels = results
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+    }
+    
     func configShapeLayer(_ shapeLayer: CAShapeLayer) {
         shapeLayer.frame = view.bounds
         let path = UIBezierPath()
@@ -138,10 +148,7 @@ class Level4ViewController: UIViewController {
         if questionNumber < 9 {
             
             //making buttons active
-            firstButton.isEnabled = true
-            secondButton.isEnabled = true
-            thirdButton.isEnabled = true
-            forthButton.isEnabled = true
+            changeButtonsState(isEnabled: true)
             
             questionNumber += 1
             firstButton.setTitle(questionsArray[questionNumbersArr[questionNumber]].allAnswers[0], for: .normal)
@@ -168,6 +175,14 @@ class Level4ViewController: UIViewController {
             performSegue(withIdentifier: "afterGameSegue4", sender: self)
         }
         
+    }
+    
+    func changeButtonsState(isEnabled: Bool) {
+        
+        firstButton.isEnabled = isEnabled
+        secondButton.isEnabled = isEnabled
+        thirdButton.isEnabled = isEnabled
+        forthButton.isEnabled = isEnabled
         
     }
     
@@ -183,14 +198,10 @@ class Level4ViewController: UIViewController {
     @IBAction func answerButtonTapped(_ sender: UIButton) {
         
         //making buttons unactive
-        firstButton.isEnabled = false
-        secondButton.isEnabled = false
-        thirdButton.isEnabled = false
-        forthButton.isEnabled = false
+        changeButtonsState(isEnabled: false)
         
         
         if sender.titleLabel?.text == questionsArray[questionNumbersArr[questionNumber]].correctAnswer {
-            print("Correct")
             score += 1
             //Saving to CoreData
             levels[3].correctAnswers += 1
@@ -212,7 +223,6 @@ class Level4ViewController: UIViewController {
             }
         }
         else {
-            print("Incorrect")
             //Saving to CoreData
             levels[3].incorrectAnswers += 1
             do {
@@ -237,6 +247,7 @@ class Level4ViewController: UIViewController {
 
 }
 
+// MARK: - Extension for initializing all questions
 extension Level4ViewController {
     
     func initAllQuestions() -> [ForthLevelQuestion] {

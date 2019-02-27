@@ -11,6 +11,7 @@ import AVFoundation
 
 class AftergameViewController: UIViewController {
     
+    // MARK: - Const and vars declaration
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var motivationLabel: UILabel!
     @IBOutlet weak var aftergameImageView: UIImageView!

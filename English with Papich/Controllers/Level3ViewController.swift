@@ -12,6 +12,7 @@ import CoreData
 
 class Level3ViewController: UIViewController, UITextFieldDelegate {
     
+    // MARK: - Const and vars declaration
     //Progress ShapeLayer
     var shapeLayer: CAShapeLayer! {
         didSet {
@@ -60,23 +61,11 @@ class Level3ViewController: UIViewController, UITextFieldDelegate {
         questionsArray = initAllQuestions()
         
         questionNumbersArr = makeNumbersArray()
-        print(questionNumbersArr)
         
         correctLabel.alpha = 0
         incorrectLabel.alpha = 0
         
-        //Loading data from CoreData
-        let fetchRequest: NSFetchRequest<MenuLevel> = MenuLevel.fetchRequest()
-        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "levelNumber", ascending: true)]
-        //print(fetchRequest)
-        
-        do {
-            let results = try context.fetch(fetchRequest)
-            levels = results
-            //print(levels)
-        } catch {
-            print(error.localizedDescription)
-        }
+        loadCoreData()
         
         // Custom progress bar
         shapeLayer = CAShapeLayer()
@@ -134,6 +123,21 @@ class Level3ViewController: UIViewController, UITextFieldDelegate {
         UIView.animate(withDuration: 0.8) {
             self.stackView.center.y = self.view.center.y
         }
+    }
+    
+    func loadCoreData() {
+        
+        //Loading data from CoreData
+        let fetchRequest: NSFetchRequest<MenuLevel> = MenuLevel.fetchRequest()
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "levelNumber", ascending: true)]
+        
+        do {
+            let results = try context.fetch(fetchRequest)
+            levels = results
+        } catch {
+            print(error.localizedDescription)
+        }
+        
     }
     
     func configShapeLayer(_ shapeLayer: CAShapeLayer) {
@@ -216,7 +220,6 @@ class Level3ViewController: UIViewController, UITextFieldDelegate {
         guard !(answerTextField.text?.isEmpty)! else { return }
         
         if answerTextField.text?.uppercased() == questionsArray[questionNumbersArr[questionNumber]].correctAnswer.uppercased() {
-            print("Correct")
             score += 1
             //Saving to CoreData
             levels[2].correctAnswers += 1
@@ -238,7 +241,6 @@ class Level3ViewController: UIViewController, UITextFieldDelegate {
             }
         }
         else {
-            print("Incorrect")
             //Saving to CoreData
             levels[2].incorrectAnswers += 1
             do {
@@ -264,6 +266,7 @@ class Level3ViewController: UIViewController, UITextFieldDelegate {
     
 }
 
+// MARK: - Extension for initializing all questions
 extension Level3ViewController {
     
     func initAllQuestions() -> [ThirdLevelQuestion] {

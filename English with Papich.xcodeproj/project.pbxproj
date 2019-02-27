@@ -189,75 +189,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		62AF5F0C21E393AE00DE4FE7 = {
+		62A9DCFE2226FE41008AE00B /* Слова */ = {
 			isa = PBXGroup;
 			children = (
-				62AF5F1721E393AE00DE4FE7 /* English with Papich */,
-				62AF5F1621E393AE00DE4FE7 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		62AF5F1621E393AE00DE4FE7 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				62AF5F1521E393AE00DE4FE7 /* English with Papich.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		62AF5F1721E393AE00DE4FE7 /* English with Papich */ = {
-			isa = PBXGroup;
-			children = (
-				62AF5F1821E393AE00DE4FE7 /* AppDelegate.swift */,
-				62D2460721E4F1770086776E /* Models */,
-				62D2460221E39DEC0086776E /* Views */,
-				62D245FF21E395090086776E /* Controllers */,
-				62AF5F1C21E393AE00DE4FE7 /* Main.storyboard */,
-				62AF5F2221E393AF00DE4FE7 /* Assets.xcassets */,
-				62D2460821E4FC7B0086776E /* Resources */,
-				62AF5F2421E393AF00DE4FE7 /* LaunchScreen.storyboard */,
-				62AF5F2721E393AF00DE4FE7 /* Info.plist */,
-				62AF5F1F21E393AE00DE4FE7 /* English_with_Papich.xcdatamodeld */,
-			);
-			path = "English with Papich";
-			sourceTree = "<group>";
-		};
-		62D245FF21E395090086776E /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				62AF5F1A21E393AE00DE4FE7 /* MenuViewController.swift */,
-				62D2460321E3C8FA0086776E /* Level1ViewController.swift */,
-				62D246C021E678700086776E /* Level2ViewController.swift */,
-				62D246C421E77AA40086776E /* Level3ViewController.swift */,
-				62D246C621E786680086776E /* Level4ViewController.swift */,
-				62D246B521E64CBA0086776E /* AftergameViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		62D2460221E39DEC0086776E /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				62D2460021E39DDA0086776E /* MenuTableViewCell.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		62D2460721E4F1770086776E /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				62D2460521E4F16B0086776E /* FirstLevelQuestion.swift */,
-				62D246C221E76DA90086776E /* SecondLevelQuestion.swift */,
-				62D246C821E7ACA50086776E /* ThirdLevelQuestion.swift */,
-				62D246CA21E7ACBA0086776E /* ForthLevelQuestion.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		62D2460821E4FC7B0086776E /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				62D246B721E658D40086776E /* Фразы на русском */,
 				62D2461A21E4FD8F0086776E /* after.mp3 */,
 				62D2461D21E4FD8F0086776E /* ascertain.mp3 */,
 				62A9DCF62225BE02008AE00B /* hate.mp3 */,
@@ -321,10 +255,84 @@
 				62D2462F21E4FD900086776E /* weasel.mp3 */,
 				62D2463121E4FD900086776E /* wildfire.mp3 */,
 			);
+			path = "Слова";
+			sourceTree = "<group>";
+		};
+		62AF5F0C21E393AE00DE4FE7 = {
+			isa = PBXGroup;
+			children = (
+				62AF5F1721E393AE00DE4FE7 /* English with Papich */,
+				62AF5F1621E393AE00DE4FE7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		62AF5F1621E393AE00DE4FE7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				62AF5F1521E393AE00DE4FE7 /* English with Papich.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		62AF5F1721E393AE00DE4FE7 /* English with Papich */ = {
+			isa = PBXGroup;
+			children = (
+				62AF5F1821E393AE00DE4FE7 /* AppDelegate.swift */,
+				62D2460721E4F1770086776E /* Models */,
+				62D2460221E39DEC0086776E /* Views */,
+				62D245FF21E395090086776E /* Controllers */,
+				62D2460821E4FC7B0086776E /* Resources */,
+				62AF5F2221E393AF00DE4FE7 /* Assets.xcassets */,
+				62AF5F1C21E393AE00DE4FE7 /* Main.storyboard */,
+				62AF5F2421E393AF00DE4FE7 /* LaunchScreen.storyboard */,
+				62AF5F2721E393AF00DE4FE7 /* Info.plist */,
+				62AF5F1F21E393AE00DE4FE7 /* English_with_Papich.xcdatamodeld */,
+			);
+			path = "English with Papich";
+			sourceTree = "<group>";
+		};
+		62D245FF21E395090086776E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				62AF5F1A21E393AE00DE4FE7 /* MenuViewController.swift */,
+				62D2460321E3C8FA0086776E /* Level1ViewController.swift */,
+				62D246C021E678700086776E /* Level2ViewController.swift */,
+				62D246C421E77AA40086776E /* Level3ViewController.swift */,
+				62D246C621E786680086776E /* Level4ViewController.swift */,
+				62D246B521E64CBA0086776E /* AftergameViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		62D2460221E39DEC0086776E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				62D2460021E39DDA0086776E /* MenuTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		62D2460721E4F1770086776E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				62D2460521E4F16B0086776E /* FirstLevelQuestion.swift */,
+				62D246C221E76DA90086776E /* SecondLevelQuestion.swift */,
+				62D246C821E7ACA50086776E /* ThirdLevelQuestion.swift */,
+				62D246CA21E7ACBA0086776E /* ForthLevelQuestion.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		62D2460821E4FC7B0086776E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				62D246B721E658D40086776E /* Фразы после игры */,
+				62A9DCFE2226FE41008AE00B /* Слова */,
+			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		62D246B721E658D40086776E /* Фразы на русском */ = {
+		62D246B721E658D40086776E /* Фразы после игры */ = {
 			isa = PBXGroup;
 			children = (
 				62D246B821E658D40086776E /* изи катка.mp3 */,
@@ -332,7 +340,7 @@
 				62A9DCF12225BDDC008AE00B /* добрый почонтек.mp3 */,
 				62A9DCF02225BDDC008AE00B /* Чемпион зверей и людей.mp3 */,
 			);
-			path = "Фразы на русском";
+			path = "Фразы после игры";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -639,7 +647,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "wrx.English-with-Papich";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -658,7 +666,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "wrx.English-with-Papich";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

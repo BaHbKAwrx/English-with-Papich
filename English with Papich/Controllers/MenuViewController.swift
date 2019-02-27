@@ -11,6 +11,7 @@ import CoreData
 
 class MenuViewController: UIViewController {
     
+    // MARK: - Const and vars declaration
     //CoreData vars
     lazy var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var levels = [MenuLevel]()
@@ -21,29 +22,20 @@ class MenuViewController: UIViewController {
     let levelsArray = ["Level 1", "Level 2", "Level 3", "Level 4"]
     let descriptionArray = ["Listen and choose!", "Translate to Russian!", "Listen and type!", "Translate to English!"]
 
+    // MARK: - VC lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         getStartData()
         
-        //Loading data from CoreData
-        let fetchRequest: NSFetchRequest<MenuLevel> = MenuLevel.fetchRequest()
-        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "levelNumber", ascending: true)]
-        print(fetchRequest)
-        
-        do {
-            let results = try context.fetch(fetchRequest)
-            levels = results
-            print(levels)
-        } catch {
-            print(error.localizedDescription)
-        }
+        loadLevelData()
         
         menuTableView.delegate = self
         menuTableView.dataSource = self
         
     }
     
+    // MARK: - Methods
     //function for init start values for level progress
     func getStartData() {
         
@@ -51,9 +43,7 @@ class MenuViewController: UIViewController {
         fetchRequest.predicate = NSPredicate(format: "levelNumber != nil")
         
         var records = 0
-        
-//        print(context)
-//        print(fetchRequest)
+
         
         do {
             let count = try context.count(for: fetchRequest)
@@ -76,12 +66,27 @@ class MenuViewController: UIViewController {
         
     }
     
+    //Loading data from CoreData
+    func loadLevelData() {
+        
+        let fetchRequest: NSFetchRequest<MenuLevel> = MenuLevel.fetchRequest()
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "levelNumber", ascending: true)]
+        
+        do {
+            let results = try context.fetch(fetchRequest)
+            levels = results
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+    }
+    
     //Making white status bar
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
-    
+    // MARK: - Button actions
     @IBAction func resetButtonTapped(_ sender: UIButton) {
         
         let ac = UIAlertController(title: nil, message: "It will reset all your progress!", preferredStyle: .alert)
@@ -122,11 +127,11 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell", for: indexPath) as? MenuTableViewCell
         
-        cell?.bgImage.image = UIImage(named: "menuCellRect")
-        cell?.levelLabel.text = "\(levels[indexPath.row].levelNumber) Level"
-        cell?.descriptionLabel.text = descriptionArray[indexPath.row]
-        cell?.correctLabel.text = "\(levels[indexPath.row].correctAnswers) correct"
-        cell?.incorrectLabel.text = "\(levels[indexPath.row].incorrectAnswers) incorrect"
+        if let cellBgImage = UIImage(named: "menuCellRect") {
+            
+            cell?.configureWith(bgImage: cellBgImage, level: "\(levels[indexPath.row].levelNumber) Level", description: descriptionArray[indexPath.row], corrAnswers: "\(levels[indexPath.row].correctAnswers) correct", incorrAnswers: "\(levels[indexPath.row].incorrectAnswers) incorrect")
+            
+        }
         
         return cell ?? UITableViewCell()
         

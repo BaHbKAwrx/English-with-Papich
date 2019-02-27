@@ -18,13 +18,20 @@ class MenuTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    }
+    
+    func configureWith(bgImage: UIImage, level: String, description: String, corrAnswers: String, incorrAnswers: String) {
+        
+        self.bgImage.image = bgImage
+        self.levelLabel.text = level
+        self.descriptionLabel.text = description
+        self.correctLabel.text = corrAnswers
+        self.incorrectLabel.text = incorrAnswers
+        
     }
 
 }
